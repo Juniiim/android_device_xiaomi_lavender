@@ -219,7 +219,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.facing=false \
     ro.vendor.sensors.mot_detect=true \
     ro.vendor.sensors.pmd=true \
-    ro.vendor.sensors.sta_detect=true
+    ro.vendor.sensors.sta_detect=true \
+    ro.vendor.sensors.pug=true
 
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
