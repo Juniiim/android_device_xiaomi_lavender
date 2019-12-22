@@ -1542,6 +1542,14 @@ vendor/lib64/hw/vulkan.sdm660.so|ad3a5d92c6c13ba0c937dd1b83f371e804a57c4e
 vendor/lib/hw/keystore.sdm660.so
 vendor/lib64/hw/keystore.sdm660.so
 
+# Lights
+vendor/bin/hw/android.hardware.light@2.0-service
+vendor/etc/init/android.hardware.light@2.0-service.rc
+vendor/lib/hw/android.hardware.light@2.0-impl.so
+vendor/lib/hw/lights.sdm660.so
+vendor/lib64/hw/android.hardware.light@2.0-impl.so
+vendor/lib64/hw/lights.sdm660.so
+
 # Listen - from LA.UM.8.2.r1-04000-sdm660.0
 vendor/etc/audio.scd
 vendor/lib/hw/sound_trigger.primary.sdm660.so|d58182b47f3a631f429ce863e1eb54c2e5c72311
