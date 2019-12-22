@@ -160,6 +160,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE += device/oneplus/enchilada/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Keystore
@@ -230,8 +231,11 @@ BOARD_SECCOMP_POLICY := $(DEVICE_PATH)/configs/seccomp
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
 BOARD_SEPOLICY_VERS := 28.0
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_SEPOLICY_DIRS += device/oneplus/enchilada/sepolicy/vendor
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/oneplus/enchilada/sepolicy/public
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/oneplus/enchilada/sepolicy/private
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Treble
@@ -264,3 +268,4 @@ WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 -include vendor/xiaomi/lavender/BoardConfigVendor.mk
+-include vendor/oneplus/enchilada/BoardConfigVendor.mk

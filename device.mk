@@ -6,8 +6,10 @@
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/lavender/lavender-vendor.mk)
+$(call inherit-product, vendor/oneplus/enchilada/enchilada-vendor.mk)
 
 -include $(LOCAL_PATH)/vendor_prop.mk
+-include device/oneplus/enchilada/vendor_prop.mk
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2340
