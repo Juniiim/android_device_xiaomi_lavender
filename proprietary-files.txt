@@ -49,8 +49,11 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # ANT+ - from LA.UM.8.2.r1-04300-sdm660.0
 -lib/libantradio.so|37c36369eeab19d5e6266d9d25ae0de9bb59502d
-product/lib64/com.qualcomm.qti.ant@1.0.so|452f459f04e5d819bf0325f83eaa14e0337a3c13
+lib64/com.qualcomm.qti.ant@1.0.so|7ae4a39356329c63cf4891016af89473a5c2e5a4
 -lib64/libantradio.so|43f6105678c082216f1606d8dd43fa1b0b753d7e
+product/lib64/com.qualcomm.qti.ant@1.0.so|452f459f04e5d819bf0325f83eaa14e0337a3c13
+vendor/lib/com.qualcomm.qti.ant@1.0.so|55d08bc2d2d2e7512d74ac2aae7744b61e23e6f9
+vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so|d1663e4c8fa3d01bd948b4adaa18f7654e1481c4
 vendor/lib64/com.qualcomm.qti.ant@1.0.so|cd400d59d68aad8e547487de9c3f49cefd4d2fca
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|aa08f9ec51392ed841f60ad08b7f083312c8c5ee
 
@@ -80,7 +83,12 @@ vendor/lib64/libqtigef.so
 
 # Audio FX modules
 vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcreverb.so
+vendor/lib/soundfx/libqcvirt.so
 vendor/lib64/soundfx/libasphere.so
+vendor/lib64/soundfx/libqcbassboost.so
+vendor/lib64/soundfx/libqcvirt.so
 
 # Audio-ACDB
 vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
@@ -1307,7 +1315,9 @@ vendor/lib64/libdpmqmihal.so|57e52678623c3db3070409879e415eb4dd33aa48
 # DRM
 vendor/bin/qseecomd
 vendor/lib/libcppf.so
+vendor/lib/libhdcpsrm.so
 vendor/lib/libQSEEComAPI.so
+vendor/lib/libsdedrm.so
 vendor/lib/libtzdrmgenprov.so
 vendor/lib64/libcpion.so
 vendor/lib64/libdrmfs.so
@@ -1319,6 +1329,7 @@ vendor/lib64/libhdcpsrm.so
 vendor/lib64/libqisl.so
 vendor/lib64/libQSEEComAPI.so
 vendor/lib64/librpmb.so
+vendor/lib64/libsdedrm.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libsecureui.so
 vendor/lib64/libSecureUILib.so
@@ -1625,9 +1636,11 @@ vendor/etc/perf/perfboostsconfig.xml|0fd6a9951f22cfe9f0942629f9d20da433604f14
 vendor/etc/perf/targetconfig.xml|376ae331df9d6c30b6208f25d04ae4ea11c0e2ea
 vendor/etc/perf/targetresourceconfigs.xml|7132f1e9ce3bb21b4854b81d6e5d24409251f177
 vendor/lib/libperfconfig.so|b67b45def855f25663f093b1db76ebc0b88bb1fa
+vendor/lib/libperfgluelayer.so|9e14c8e4bddf1f5c9c03c3b85fd2a44bfad1a977
 vendor/lib/libqti-perfd-client.so|3fa11449bc068278b7a87aa55e161b015cd780f3
-vendor/lib/libqti-perfd.so|f09adaadc93019827274d4eb7725d09412911d82
+vendor/lib/libqti-perfd.so|f09adaadc93019827274d4eb7725d09412911d82.
 vendor/lib/libqti-util.so|e7882172095bb0df546d4c358744761aba932b5a
+vendor/lib/libqti-utils.so|d1e1b7b1abb1a631e3f8b65dcdcc2a5329a94ea8
 vendor/lib/vendor.qti.hardware.perf@1.0.so|a528c00bbdea1c2a3c0754bef1cff0f94023a6ed
 vendor/lib/vendor.qti.hardware.perf@2.0.so|135bffe1f7cc29bffcf31382a8b39e6debfb28b4
 vendor/lib64/libperfconfig.so|0f3ab4aba588a1de0dfee7731f9e569c96b2cbcf
@@ -1635,6 +1648,7 @@ vendor/lib64/libperfgluelayer.so|bfb9706a184fca4163e5a7cb5fcad11674958761
 vendor/lib64/libqti-perfd-client.so|ac1ca3a6ba93feee4c977cb6e54ca91ab3ce3b23
 vendor/lib64/libqti-perfd.so|184e4a124ef4f509ce377ce3941353948917e605
 vendor/lib64/libqti-util.so|c78b855b3909b01071ced5fc898add769de4a5b6
+vendor/lib64/libqti-utils.so|0411b2b1033fbb699c75c5a7772b8651910f2b97
 vendor/lib64/vendor.qti.hardware.perf@1.0.so|dce6b3c8b7046f910b96de3d7d2e5967271c65fe
 vendor/lib64/vendor.qti.hardware.perf@2.0.so|f796f5a8c1713b3c36a6d890d1a89568359c4ddd
 
@@ -1882,6 +1896,7 @@ etc/wfdconfigsink.xml|5b4a96f251fd83c2eee520d06bea2b5b159fcd36
 lib/com.qualcomm.qti.wifidisplayhal@1.0.so|47e7949bceaff2d4ef11c51073fa2a173b82eddd
 lib/libFileMux.so|79661e6dffc90234ad446641264fd0fa1a3fe6ab
 lib/libOmxMux.so|1ad1aa835a3dfb8bfea2a29291f82a173ba6a868
+lib/libmmosal.so|37719ae5647ef6ec826d06b93e34e0b53c565529
 lib/libmmparser_lite.so|b1b4161b7097f5feeff0f043e8b94cd94553e4ad
 lib/libmmrtpdecoder.so|ff871cfac4a4d9dac89a612f100ca9de9add9344
 lib/libmmrtpencoder.so|eb32452859323bdfdabcf3780bebad781b367ac4
@@ -1904,6 +1919,7 @@ lib/libwfduibcsrc.so|f6f35ca89441967fcf3f6590f45b81d92311a81c
 lib/libwfduibcsrcinterface.so|bfe916d7d1a9395883417b4076a41a50d7cf83ad
 lib64/libFileMux.so|6489129fa0ac93f0c76d304c249ffc18d4fd8677
 lib64/libOmxMux.so|1f45d8ab66af19ddb8088bd3a316995378c290e7
+lib64/libmmosal.so|3d50c7ea56db9c3676be9d6e36e1030386ecdb02
 lib64/libmmparser_lite.so|a3bb2aefbcca59d845a55682a2bcc36b24433f54
 lib64/libmmrtpdecoder.so|680db93b68a30fef67268c5f8783371a0af22ed7
 lib64/libmmrtpencoder.so|8d03db323d3ee5efce386374769ecf6214d9a13c
@@ -1914,9 +1930,15 @@ vendor/bin/wifidisplayhalservice|56ec79e39595e0c34baba8cb16ab5d1931d793db
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|04e463342cbba4c0e9c311a18238f95dec9359fd
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so|f8d82d7e80e730c01fc0c84f4464762d273b4d62
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|cf03926fce8af504ae3a36af6ea50ce066112ca1
+vendor/lib/libhdcp1prov.so|dcc8f539f3d213033d43e65f30958dca3fd4bc5c
+vendor/lib/libhdcp2p2prov.so|0bb620cc586cf01bd45796451d82525f5fb5ab46
+vendor/lib/libmmosal_proprietary.so|c65b22b4a22d913ed0fbe25a8ef06d14deca064e
 vendor/lib/libwfdcommonutils_proprietary.so|14df45871041125273609b6ddc507fa6901cb44d
 vendor/lib/libwfdhaldsmanager.so|00a7bf5c76ef2b1ee72fcaf6d3af6d7f09f31fae
 vendor/lib/libwfdhdcpcp.so|ba051604d914847b862d78af70d02abf85d86d4b
 vendor/lib/libwfdmmservice.so|87f9c841031272e6a3713abd85326f84d2ae52e5
 vendor/lib/libwfdmodulehdcpsession.so|97ffe7c96970fc5605f4f6414fc31ab7cec78bdc
+vendor/lib64/libhdcp1prov.so|25aa30d053c9d520526e15434ce80a2635a8a40c
+vendor/lib64/libhdcp2p2prov.so|de8347cbb242a1e069b42577ce810edad04d2afe
+vendor/lib64/libmmosal_proprietary.so|3e61257e525983a11a6198fac1fdf17afec4823e
 vendor/lib64/libwfdhdcpcp.so|1987f0ab60d9905be6489fa6ca3720fe2d9c636b
